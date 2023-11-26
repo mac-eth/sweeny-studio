@@ -5,13 +5,15 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter Variable", "Inter", ...defaultTheme.fontFamily.sans],
+        satoshi: ["Satoshi", ...defaultTheme.fontFamily.sans],
+        melodrama: ["Melodrama"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
       animation: {
         marquee: "marquee 50s linear infinite",
+        spinSlow: "spin 5s linear infinite",
       },
       keyframes: {
         marquee: {

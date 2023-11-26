@@ -4,8 +4,9 @@ const { class: className } = Astro.props;
 
 <div
   class:list={[
-    " rounded-2xl relative p-8 bg-gray-50/60 backdrop-blur-md transition-all ring-1 ring-gray-200/50 shadow hover:shadow-lg",
+    ' relative rounded-2xl bg-gray-50/60 p-8 shadow ring-1 ring-gray-200/50 backdrop-blur-md transition-all hover:shadow-lg',
     className,
-  ]}>
+  ]}
+>
   <slot />
 </div>

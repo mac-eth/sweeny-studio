@@ -1,10 +1,9 @@
 ---
-import { ViewTransitions } from "astro:transitions";
-import { SEO } from "astro-seo";
-import Footer from "@components/footer.astro";
-import Navbar from "@components/navbar/navbar.astro";
-
-import "@fontsource-variable/inter/index.css";
+import Footer from '@components/footer.astro';
+import Navbar from '@components/navbar/navbar.astro';
+import { SEO } from 'astro-seo';
+import { ViewTransitions } from 'astro:transitions';
+import '@fontsource-variable/inter/index.css';
 
 export interface Props {
   title?: string;
@@ -13,16 +12,13 @@ export interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
-const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
-  Astro.site,
-).toString();
+const resolvedImageWithDomain = new URL('/opengraph.jpg', Astro.site).toString();
 
 const { title, footerMargin = true } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Sweeny Studio"
-  : "Sweeny Studio - Modern Web Design & Development Agency";
+  ? title + ' | ' + 'Sweeny Studio'
+  : 'Sweeny Studio - Modern Web Design & Development Agency';
 ---
 
 <!doctype html>
@@ -38,134 +34,134 @@ const makeTitle = title
       description="Sweeny Studio - Modern Web Design & Development Agency"
       canonical={canonicalURL}
       twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
-        card: "summary_large_image",
+        creator: '@surjithctly',
+        site: '@web3templates',
+        card: 'summary_large_image',
       }}
       openGraph={{
         basic: {
           url: canonicalURL,
-          type: "website",
+          type: 'website',
           title: `Sweeny Studio - Modern Web Design & Development Agency`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: 'Astroship Homepage Screenshot',
         },
       }}
     />
     <style is:global>
       @font-face {
-        font-family: "Melodrama";
-        src: url("https://assets.website-files.com/6517b8e1fd330ce501fa976d/6517b8e1fd330ce501fa97a1_Melodrama-Semibold.otf")
-          format("opentype");
+        font-family: 'Melodrama';
+        src: url('https://assets.website-files.com/6517b8e1fd330ce501fa976d/6517b8e1fd330ce501fa97a1_Melodrama-Semibold.otf')
+          format('opentype');
         font-weight: 600;
         font-style: normal;
         font-display: swap;
       }
       @font-face {
-        font-family: "Melodrama";
-        src: url("https://assets.website-files.com/6517b8e1fd330ce501fa976d/6517b8e1fd330ce501fa97a2_Melodrama-Medium.otf")
-          format("opentype");
+        font-family: 'Melodrama';
+        src: url('https://assets.website-files.com/6517b8e1fd330ce501fa976d/6517b8e1fd330ce501fa97a2_Melodrama-Medium.otf')
+          format('opentype');
         font-weight: 500;
         font-style: normal;
         font-display: swap;
       }
       @font-face {
-        font-family: "Melodrama";
-        src: url("https://assets.website-files.com/6517b8e1fd330ce501fa976d/6517b8e1fd330ce501fa97a0_Melodrama-Regular.otf")
-          format("opentype");
+        font-family: 'Melodrama';
+        src: url('https://assets.website-files.com/6517b8e1fd330ce501fa976d/6517b8e1fd330ce501fa97a0_Melodrama-Regular.otf')
+          format('opentype');
         font-weight: 400;
         font-style: normal;
         font-display: swap;
       }
       @font-face {
-        font-family: "Melodrama";
-        src: url("https://assets.website-files.com/6517b8e1fd330ce501fa976d/6517b8e1fd330ce501fa979e_Melodrama-Bold.otf")
-          format("opentype");
+        font-family: 'Melodrama';
+        src: url('https://assets.website-files.com/6517b8e1fd330ce501fa976d/6517b8e1fd330ce501fa979e_Melodrama-Bold.otf')
+          format('opentype');
         font-weight: 700;
         font-style: normal;
         font-display: swap;
       }
       @font-face {
-        font-family: "Satoshi";
-        src: url("https://assets.website-files.com/6520eb215790a4fb1203bad1/65212b8a79725e7b774a2a15_Satoshi-MediumItalic.otf")
-          format("opentype");
+        font-family: 'Satoshi';
+        src: url('https://assets.website-files.com/6520eb215790a4fb1203bad1/65212b8a79725e7b774a2a15_Satoshi-MediumItalic.otf')
+          format('opentype');
         font-weight: 500;
         font-style: italic;
         font-display: swap;
       }
       @font-face {
-        font-family: "Satoshi";
-        src: url("https://assets.website-files.com/6520eb215790a4fb1203bad1/65212b8a50c47d59a69d66cf_Satoshi-Black.otf")
-          format("opentype");
+        font-family: 'Satoshi';
+        src: url('https://assets.website-files.com/6520eb215790a4fb1203bad1/65212b8a50c47d59a69d66cf_Satoshi-Black.otf')
+          format('opentype');
         font-weight: 900;
         font-style: normal;
         font-display: swap;
       }
       @font-face {
-        font-family: "Satoshi";
+        font-family: 'Satoshi';
         src:
-          url("https://assets.website-files.com/6520eb215790a4fb1203bad1/65212b8a85d32af56bfdd598_Satoshi-Bold.otf")
-            format("opentype"),
-          url("https://assets.website-files.com/6520eb215790a4fb1203bad1/65212b8a85d32af56bfdd598_Satoshi-Bold.otf")
-            format("opentype");
+          url('https://assets.website-files.com/6520eb215790a4fb1203bad1/65212b8a85d32af56bfdd598_Satoshi-Bold.otf')
+            format('opentype'),
+          url('https://assets.website-files.com/6520eb215790a4fb1203bad1/65212b8a85d32af56bfdd598_Satoshi-Bold.otf')
+            format('opentype');
         font-weight: 700;
         font-style: normal;
         font-display: swap;
       }
       @font-face {
-        font-family: "Satoshi";
-        src: url("https://assets.website-files.com/6520eb215790a4fb1203bad1/65212b8a2500dc96a473e0e0_Satoshi-Light.otf")
-          format("opentype");
+        font-family: 'Satoshi';
+        src: url('https://assets.website-files.com/6520eb215790a4fb1203bad1/65212b8a2500dc96a473e0e0_Satoshi-Light.otf')
+          format('opentype');
         font-weight: 300;
         font-style: normal;
         font-display: swap;
       }
       @font-face {
-        font-family: "Satoshi";
-        src: url("https://assets.website-files.com/6520eb215790a4fb1203bad1/65212b8a517fd57926bd595d_Satoshi-Regular.otf")
-          format("opentype");
+        font-family: 'Satoshi';
+        src: url('https://assets.website-files.com/6520eb215790a4fb1203bad1/65212b8a517fd57926bd595d_Satoshi-Regular.otf')
+          format('opentype');
         font-weight: 400;
         font-style: normal;
         font-display: swap;
       }
       @font-face {
-        font-family: "Satoshi";
-        src: url("https://assets.website-files.com/6520eb215790a4fb1203bad1/65212b8ad773cd686aa2b213_Satoshi-Italic.otf")
-          format("opentype");
+        font-family: 'Satoshi';
+        src: url('https://assets.website-files.com/6520eb215790a4fb1203bad1/65212b8ad773cd686aa2b213_Satoshi-Italic.otf')
+          format('opentype');
         font-weight: 400;
         font-style: italic;
         font-display: swap;
       }
       @font-face {
-        font-family: "Satoshi";
-        src: url("https://assets.website-files.com/6520eb215790a4fb1203bad1/65212b8a9d5fc43ae5b696d3_Satoshi-LightItalic.otf")
-          format("opentype");
+        font-family: 'Satoshi';
+        src: url('https://assets.website-files.com/6520eb215790a4fb1203bad1/65212b8a9d5fc43ae5b696d3_Satoshi-LightItalic.otf')
+          format('opentype');
         font-weight: 300;
         font-style: italic;
         font-display: swap;
       }
       @font-face {
-        font-family: "Satoshi";
-        src: url("https://assets.website-files.com/6520eb215790a4fb1203bad1/65212b8a83b1626fa0993ad7_Satoshi-BlackItalic.otf")
-          format("opentype");
+        font-family: 'Satoshi';
+        src: url('https://assets.website-files.com/6520eb215790a4fb1203bad1/65212b8a83b1626fa0993ad7_Satoshi-BlackItalic.otf')
+          format('opentype');
         font-weight: 900;
         font-style: italic;
         font-display: swap;
       }
       @font-face {
-        font-family: "Satoshi";
-        src: url("https://assets.website-files.com/6520eb215790a4fb1203bad1/65212b8a30a53cecc968cd0b_Satoshi-Medium.otf")
-          format("opentype");
+        font-family: 'Satoshi';
+        src: url('https://assets.website-files.com/6520eb215790a4fb1203bad1/65212b8a30a53cecc968cd0b_Satoshi-Medium.otf')
+          format('opentype');
         font-weight: 500;
         font-style: normal;
         font-display: swap;
       }
       @font-face {
-        font-family: "Satoshi";
-        src: url("https://assets.website-files.com/6520eb215790a4fb1203bad1/65212b8ad7d94f7da29a0542_Satoshi-BoldItalic.otf")
-          format("opentype");
+        font-family: 'Satoshi';
+        src: url('https://assets.website-files.com/6520eb215790a4fb1203bad1/65212b8ad7d94f7da29a0542_Satoshi-BoldItalic.otf')
+          format('opentype');
         font-weight: 700;
         font-style: italic;
         font-display: swap;
@@ -178,7 +174,7 @@ const makeTitle = title
     </style>
     <ViewTransitions />
   </head>
-  <body class="font-satoshi bg-neutral-950">
+  <body class="bg-neutral-950 font-satoshi">
     <Navbar />
     <slot />
     <Footer margin={footerMargin} />

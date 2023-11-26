@@ -1,37 +1,37 @@
 ---
-import Button from "@components/ui/button.astro";
-import Container from "@components/container.astro";
-import HeroCircle from "@assets/hero-circle.svg";
-import { Picture } from "astro:assets";
+import HeroCircle from '@assets/hero-circle.svg';
+import Container from '@components/container.astro';
+import Button from '@components/ui/button.astro';
+import { Picture } from 'astro:assets';
 ---
 
-<div class="relative max-w-screen-xl mx-auto">
-  <div class="grid grid-cols-3 my-24 z-10">
+<div class="relative mx-auto max-w-screen-xl overflow-x-clip">
+  <div class="z-10 my-16 grid grid-cols-3 sm:my-24 md:my-32 lg:my-48">
     <div class="col-span-2">
-      <h1 class="text-[140px] leading-tight font-melodrama">
+      <h1 class="font-melodrama text-9xl leading-tight">
         <span
-          class="bg-clip-text text-transparent bg-gradient-to-r from-neutral-50 from-65% to-neutral-600">
+          class="bg-gradient-to-r from-neutral-50 from-65% to-neutral-600 bg-clip-text text-transparent"
+        >
           Sweeny Studio,
         </span>
         <span
-          class="bg-clip-text text-transparent bg-gradient-to-r from-neutral-50 from-65% to-neutral-600">
+          class="bg-gradient-to-r from-neutral-50 from-65% to-neutral-600 bg-clip-text text-transparent"
+        >
           Modern Web
         </span>
         <span
-          class="bg-clip-text text-transparent bg-gradient-to-r from-neutral-50 from-65% to-neutral-600">
+          class="bg-gradient-to-r from-neutral-50 from-65% to-neutral-600 bg-clip-text text-transparent"
+        >
           Development
         </span>
       </h1>
     </div>
     <div class="col-span-1 flex flex-col justify-between py-12">
-      <h3 class="text-neutral-400 text-lg leading-tight">
-        Sweeny Studio is a boutique web design & development studio based in
-        Australia. We specialise in building modern, fast, and secure websites
-        for businesses.
+      <h3 class="text-lg leading-tight text-neutral-400">
+        Sweeny Studio is a boutique web design & development studio based in Australia. We
+        specialise in building modern, fast, and secure websites for businesses.
       </h3>
-      <Button
-        size="xl"
-        class="group text-2xl w-72 uppercase items-center justify-center">
+      <Button size="xl" class="group w-72 items-center justify-center text-2xl uppercase">
         <a href="/contact">Get A Quote</a>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@ import { Picture } from "astro:assets";
           height="32"
           fill="currentColor"
           viewBox="0 0 256 256"
-          class="inline-block ml-2 group-hover:translate-x-2 transition-all duration-300"
+          class="ml-2 inline-block transition-all duration-300 group-hover:translate-x-2"
           ><path
             d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"
           ></path></svg
@@ -47,13 +47,7 @@ import { Picture } from "astro:assets";
       </Button>
     </div>
   </div>
-</div>
-<div
-  class="absolute animate-spinSlow top-1/4 left-1/3 h-[32rem] w-[32rem] -z-10">
-  <Picture
-    src={HeroCircle}
-    alt="Circle Animation"
-    formats={["svg"]}
-    loading="eager"
-  />
+  <div class="absolute inset-0 left-1/3 -z-10 h-[32rem] w-[32rem] animate-spinSlow">
+    <Picture src={HeroCircle} alt="Circle Animation" formats={['svg']} loading="eager" />
+  </div>
 </div>

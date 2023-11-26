@@ -1,20 +1,22 @@
 ---
-import { Picture } from "astro:assets";
-import Box from "@components/ui/box.astro";
+import Box from '@components/ui/box.astro';
+import { Picture } from 'astro:assets';
+
 const { text, title, name, image } = Astro.props;
 ---
 
 <Box
-  class="w-[calc(100vw-5.75rem)] max-w-md flex flex-col justify-between snap-start snap-always shrink-0 first-of-type:scroll-m-10 scroll-m-5">
+  class="flex w-[calc(100vw-5.75rem)] max-w-md shrink-0 snap-start snap-always scroll-m-5 flex-col justify-between first-of-type:scroll-m-10"
+>
   <!-- <div class="absolute font-serif text-5xl left-2 top-8 text-slate-300 -z-10">
     “
   </div> -->
-  <blockquote class="text-lg md:text-xl [text-wrap:balance]">{text}</blockquote>
-  <div class="flex items-center gap-3 mt-10">
+  <blockquote class="text-lg [text-wrap:balance] md:text-xl">{text}</blockquote>
+  <div class="mt-10 flex items-center gap-3">
     <div class="shrink-0">
       <Picture
-        class="rounded-full w-12 h-12 object-cover bg-slate-100"
-        formats={["avif", "webp"]}
+        class="h-12 w-12 rounded-full bg-slate-100 object-cover"
+        formats={['avif', 'webp']}
         src={image}
         alt={name}
         width="48"

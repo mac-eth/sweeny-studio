@@ -1,7 +1,7 @@
 ---
-import Container from "@components/container.astro";
-import Sectionhead from "@components/sectionhead.astro";
-import Layout from "./Layout.astro";
+import Container from '@components/container.astro';
+import Sectionhead from '@components/sectionhead.astro';
+import Layout from './Layout.astro';
 
 const { frontmatter } = Astro.props;
 ---
@@ -15,7 +15,7 @@ const { frontmatter } = Astro.props;
       </Fragment>
     </Sectionhead>
 
-    <div class="mx-auto prose mt-10">
+    <div class="prose mx-auto mt-10">
       <slot />
     </div>
   </Container>

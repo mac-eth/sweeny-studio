@@ -13,7 +13,7 @@ module.exports = {
       },
       animation: {
         marquee: "marquee 50s linear infinite",
-        spinSlow: "spin 5s linear infinite",
+        spinSlow: "spin 4s linear infinite",
       },
       keyframes: {
         marquee: {

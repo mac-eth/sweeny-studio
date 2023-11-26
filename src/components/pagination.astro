@@ -2,13 +2,14 @@
 const { url } = Astro.props;
 ---
 
-<div class="flex justify-center items-center mt-10 gap-4">
+<div class="mt-10 flex items-center justify-center gap-4">
   {
     url.prev && (
       <a
-        class="bg-gray-100 px-5 py-2 rounded-md hover:bg-gray-200 transition"
+        class="rounded-md bg-gray-100 px-5 py-2 transition hover:bg-gray-200"
         href={url.prev}
-        title="Go to Previous">
+        title="Go to Previous"
+      >
         &larr; Prev
       </a>
     )
@@ -16,9 +17,10 @@ const { url } = Astro.props;
   {
     url.next && (
       <a
-        class="bg-gray-100 px-5 py-2 rounded-md hover:bg-gray-200 transition"
+        class="rounded-md bg-gray-100 px-5 py-2 transition hover:bg-gray-200"
         href={url.next}
-        title="Go to Next">
+        title="Go to Next"
+      >
         Next &rarr;
       </a>
     )

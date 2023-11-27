@@ -1,4 +1,5 @@
 ---
+import Container from '@components/container.astro';
 import CaseStudies from '@components/sections/case-studies.astro';
 import Hero from '@components/sections/hero.astro';
 import Logos from '@components/sections/logos.astro';
@@ -8,5 +9,7 @@ import Layout from '@layouts/Layout.astro';
 <Layout footerMargin={false}>
   <Hero />
   <Logos />
-  <CaseStudies />
+  <Container>
+    <CaseStudies />
+  </Container>
 </Layout>

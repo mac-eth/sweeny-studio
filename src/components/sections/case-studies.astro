@@ -5,12 +5,13 @@ import GoodMix from '@assets/casestudies/goodmix-desktop.jpeg';
 import Kahuna from '@assets/casestudies/kahuna-desktop.jpeg';
 import MacSweeny from '@assets/casestudies/mac-sweeny-tablet.png';
 import PaydeskMobile from '@assets/casestudies/paydesk-mobile.png';
-import Sectionhead from '@components/sections/sectionhead.astro';
 import Casestudy from '@components/ui/astro/casestudy.astro';
+import Sectionhead from '@components/ui/astro/sectionhead.astro';
+import SectionHead from '@components/ui/react/section-head';
 ---
 
 <section class="my-32 min-h-screen">
-  <Sectionhead title="Case Studies." style="text-center" />
+  <SectionHead title="Case Studies." className="text-center" />
   <div class="my-32 grid h-full grid-cols-12 items-baseline">
     <div class="col-span-5">
       <Casestudy

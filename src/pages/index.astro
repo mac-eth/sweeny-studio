@@ -1,8 +1,9 @@
 ---
-import Container from '@components/container.astro';
 import CaseStudies from '@components/sections/case-studies.astro';
-import Hero from '@components/sections/hero.astro';
+import Hero from '@components/sections/hero';
 import Logos from '@components/sections/logos.astro';
+import Testimonials from '@components/sections/testimonials.astro';
+import Container from '@components/ui/astro/container.astro';
 import Layout from '@layouts/Layout.astro';
 ---
 
@@ -12,4 +13,5 @@ import Layout from '@layouts/Layout.astro';
   <Container>
     <CaseStudies />
   </Container>
+  <Testimonials />
 </Layout>

@@ -1,22 +1,13 @@
 ---
-import Container from '@components/container.astro';
-import Link from '@components/ui/link.astro';
+import Container from '@components/ui/astro/container.astro';
+import Link from '@components/ui/astro/link.astro';
 import { Astronav, MenuIcon, MenuItems, StickyHeader } from 'astro-navbar';
 import Dropdown from './dropdown.astro';
 
 const menuitems = [
   {
     title: 'Case Studies',
-    path: '#',
-    children: [
-      { title: 'Features', path: '/features' },
-      { title: 'Integrations', path: '/integrations' },
-      {
-        title: 'Blog Details',
-        path: '/blog//typography-example',
-      },
-      { title: '404 Page', path: '/404' },
-    ],
+    path: '/case-studies',
   },
   {
     title: 'About',
@@ -58,26 +49,16 @@ const menuitems = [
         <MenuItems class="mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto">
           <ul class="flex flex-col lg:flex-row lg:gap-3">
             {
-              menuitems.map((item, index) => (
+              menuitems.map((item) => (
                 <>
-                  {item.children && (
-                    <Dropdown
-                      title={item.title}
-                      children={item.children}
-                      lastItem={index === menuitems.length - 1}
-                    />
-                  )}
-
-                  {!item.children && (
-                    <li>
-                      <a
-                        href={item.path}
-                        class="flex rounded-full py-2 text-lg text-neutral-300 underline-offset-4 transition duration-200 hover:text-neutral-50 hover:underline lg:px-3"
-                      >
-                        {item.title}
-                      </a>
-                    </li>
-                  )}
+                  <li>
+                    <a
+                      href={item.path}
+                      class="flex rounded-full py-2 text-lg text-neutral-300 underline-offset-4 transition duration-200 hover:text-neutral-50 hover:underline lg:px-3"
+                    >
+                      {item.title}
+                    </a>
+                  </li>
                 </>
               ))
             }

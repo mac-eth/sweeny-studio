@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
@@ -14,18 +15,24 @@ module.exports = {
       animation: {
         marquee: 'marquee 50s linear infinite',
         spinSlow: 'spin 4s linear infinite',
+        animateEntry: 'animateEntry 300ms ease-out forwards', // Added 'forwards' to maintain the final state
+        animateVisible: 'animateVisible 300ms ease-out forwards',
       },
       boxShadow: {
         '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
       },
       keyframes: {
         marquee: {
-          from: {
-            transform: 'translateX(0)',
-          },
-          to: {
-            transform: 'translateX(calc(-100% - 2.5rem))',
-          },
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        animateEntry: {
+          '0%': { opacity: 0, transform: 'translateY(20px)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' },
+        },
+        animateVisible: {
+          '0%': { opacity: 0, transform: 'translateY(20px)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' },
         },
       },
     },

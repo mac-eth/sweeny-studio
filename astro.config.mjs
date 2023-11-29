@@ -1,14 +1,15 @@
-import { defineConfig, sharpImageService } from "astro/config";
-import tailwind from "@astrojs/tailwind";
-import mdx from "@astrojs/mdx";
-import sitemap from "@astrojs/sitemap";
+import mdx from '@astrojs/mdx';
+import react from '@astrojs/react';
+import sitemap from '@astrojs/sitemap';
+import tailwind from '@astrojs/tailwind';
+import { defineConfig, sharpImageService } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astroship-pro.web3templates.com",
+  site: 'https://astroship-pro.web3templates.com',
   image: {
     service: sharpImageService(),
-    domains: ["source.unsplash.com", "images.unsplash.com"],
+    domains: ['source.unsplash.com', 'images.unsplash.com'],
   },
-  integrations: [tailwind(), mdx(), sitemap()],
+  integrations: [tailwind(), mdx(), sitemap(), react()],
 });

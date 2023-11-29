@@ -1,0 +1,12 @@
+---
+const { class: className } = Astro.props;
+---
+
+<div
+  class:list={[
+    ' relative rounded-2xl bg-neutral-950/80 p-8 shadow-sm shadow-neutral-700 ring-1 ring-neutral-200/50 backdrop-blur-md transition-all',
+    className,
+  ]}
+>
+  <slot />
+</div>

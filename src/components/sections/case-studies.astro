@@ -1,14 +1,18 @@
 ---
-import GoodMix from '@assets/casestudies/goodmix-desktop.png';
+import Blockrecipes from '@assets/casestudies/blockrecipes-desktop.png';
+import ElectricConfetti from '@assets/casestudies/electric-confetti-tablet.png';
+import GoodMix from '@assets/casestudies/goodmix-desktop.jpeg';
+import Kahuna from '@assets/casestudies/kahuna-desktop.jpeg';
 import MacSweeny from '@assets/casestudies/mac-sweeny-tablet.png';
-import Casestudy from '@components/casestudy.astro';
-import Sectionhead from '@components/sectionhead.astro';
+import PaydeskMobile from '@assets/casestudies/paydesk-mobile.png';
+import Sectionhead from '@components/sections/sectionhead.astro';
+import Casestudy from '@components/ui/astro/casestudy.astro';
 ---
 
 <section class="my-32 min-h-screen">
   <Sectionhead title="Case Studies." style="text-center" />
-  <div class="grid h-full grid-cols-12">
-    <div class="col-span-5 h-96">
+  <div class="my-32 grid h-full grid-cols-12 items-baseline">
+    <div class="col-span-5">
       <Casestudy
         imageSrc={MacSweeny}
         imageAlt="Mac Sweeny"
@@ -18,14 +22,48 @@ import Sectionhead from '@components/sectionhead.astro';
         url="https://www.mac-sweeny.dev/"
       />
     </div>
-    <div class="col-span-5 col-start-7 h-96 place-items-end items-end">
+    <div class="ite col-span-5 col-start-7">
       <Casestudy
-        imageSrc={GoodMix}
-        imageAlt="Goodmix"
+        imageSrc={Kahuna}
+        imageAlt="Kahuna"
+        year="2023"
+        services="Web Design, Development & Hosting"
+        name="Goodmix"
+        url="https://www.kahunaconnect.com/"
+      />
+    </div>
+  </div>
+  <div class="my-32 grid h-full grid-cols-12 items-baseline">
+    <div class="col-span-8 col-start-3">
+      <Casestudy
+        imageSrc={Blockrecipes}
+        imageAlt="BlockRecipes"
+        year="2023"
+        services="Web Design, Development & Hosting"
+        name="Blockrecipes"
+        url="https://www.blockrecipes.io/"
+      />
+    </div>
+  </div>
+  <div class="my-32 grid h-full grid-cols-12 items-baseline">
+    <div class="col-span-6 col-start-2">
+      <Casestudy
+        imageSrc={ElectricConfetti}
+        imageAlt="Electric Confetti"
         year="2023"
         services="Web Design, Development & Hosting"
         name="Goodmix"
         url="https://www.goodmix.com.au/"
+      />
+    </div>
+    <div class="col-span-3 col-start-9">
+      <Casestudy
+        imageSrc={PaydeskMobile}
+        imageAlt="Paydesk Mobile"
+        year="2023"
+        services="Web Design, Development & Hosting"
+        name="Paydesk"
+        url="https://www.paydesk.co/"
       />
     </div>
   </div>

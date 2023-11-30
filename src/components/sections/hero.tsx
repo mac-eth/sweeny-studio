@@ -49,8 +49,8 @@ export default function Hero() {
           </div>
           <div className="col-span-1 text-start flex flex-col items-start justify-between gap-y-8 py-12 lg:h-full">
             <motion.p variants={bounceAnimation} className="text-lg leading-tight text-neutral-400">
-              Sweeny Studio is a boutique web design & development studio based in Australia. We
-              specialise in building modern, fast, and secure websites for businesses.
+              Sweeny Studio is a modern web design & development studio based in Australia. We're
+              passionate about creating beautiful websites that are fast, secure, and easy to use.
             </motion.p>
             <motion.div variants={bounceAnimation}>
               <Button size="xl" className="text-2xl uppercase">

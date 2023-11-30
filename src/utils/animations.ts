@@ -1,6 +1,6 @@
 export const bounceAnimation = {
   initial: {
-    y: -50,
+    y: 0,
     opacity: 0,
   },
   animate: {

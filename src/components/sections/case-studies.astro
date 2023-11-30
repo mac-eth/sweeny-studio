@@ -5,16 +5,17 @@ import GoodMix from '@assets/casestudies/goodmix-desktop.jpeg';
 import Kahuna from '@assets/casestudies/kahuna-desktop.jpeg';
 import MacSweeny from '@assets/casestudies/mac-sweeny-tablet.png';
 import PaydeskMobile from '@assets/casestudies/paydesk-mobile.png';
-import Casestudy from '@components/ui/astro/casestudy.astro';
 import Sectionhead from '@components/ui/astro/sectionhead.astro';
 import SectionHead from '@components/ui/react/section-head';
+import CaseStudy from '../ui/react/case-study';
 ---
 
 <section class="my-32 min-h-screen">
   <SectionHead title="Case Studies." className="text-center" />
   <div class="my-32 grid h-full grid-cols-12 items-baseline">
     <div class="col-span-5">
-      <Casestudy
+      <CaseStudy
+        client:load
         imageSrc={MacSweeny}
         imageAlt="Mac Sweeny"
         year="2023"
@@ -23,8 +24,9 @@ import SectionHead from '@components/ui/react/section-head';
         url="https://www.mac-sweeny.dev/"
       />
     </div>
-    <div class="ite col-span-5 col-start-7">
-      <Casestudy
+    <div class="col-span-5 col-start-7">
+      <CaseStudy
+        client:load
         imageSrc={Kahuna}
         imageAlt="Kahuna"
         year="2023"
@@ -36,7 +38,8 @@ import SectionHead from '@components/ui/react/section-head';
   </div>
   <div class="my-32 grid h-full grid-cols-12 items-baseline">
     <div class="col-span-8 col-start-3">
-      <Casestudy
+      <CaseStudy
+        client:load
         imageSrc={Blockrecipes}
         imageAlt="BlockRecipes"
         year="2023"
@@ -48,7 +51,8 @@ import SectionHead from '@components/ui/react/section-head';
   </div>
   <div class="my-32 grid h-full grid-cols-12 items-baseline">
     <div class="col-span-6 col-start-2">
-      <Casestudy
+      <CaseStudy
+        client:load
         imageSrc={ElectricConfetti}
         imageAlt="Electric Confetti"
         year="2023"
@@ -58,7 +62,8 @@ import SectionHead from '@components/ui/react/section-head';
       />
     </div>
     <div class="col-span-3 col-start-9">
-      <Casestudy
+      <CaseStudy
+        client:load
         imageSrc={PaydeskMobile}
         imageAlt="Paydesk Mobile"
         year="2023"

@@ -18,7 +18,7 @@ export default function Hero() {
 
   return (
     <section>
-      <div className="relative mx-auto max-w-screen-xl overflow-x-clip">
+      <div className="relative mx-8 lg:mx-auto max-w-screen overflow-x-clip">
         <motion.div
           ref={ref}
           animate={isInView ? 'animate' : 'initial'}
@@ -26,7 +26,7 @@ export default function Hero() {
           className="z-10 my-16 flex flex-col items-center text-center sm:my-24 md:my-32 lg:my-48 lg:grid lg:grid-cols-3"
         >
           <div className="col-span-2">
-            <h1 className="font-melodrama text-6xl leading-tight sm:text-7xl lg:text-9xl text-start">
+            <h1 className="font-melodrama text-6xl leading-tight sm:text-7xl lg:text-9xl text-center md:text-start">
               <motion.span
                 variants={bounceAnimation}
                 className="bg-gradient-to-r from-neutral-50 from-65% to-neutral-400 bg-clip-text text-transparent lg:to-neutral-600"
@@ -48,11 +48,17 @@ export default function Hero() {
             </h1>
           </div>
           <div className="col-span-1 text-start flex flex-col items-start justify-between gap-y-8 py-12 lg:h-full">
-            <motion.p variants={bounceAnimation} className="text-lg leading-tight text-neutral-400">
+            <motion.p
+              variants={bounceAnimation}
+              className="text-base text-center md:text-start leading-tight text-neutral-400"
+            >
               Sweeny Studio is a modern web design & development studio based in Australia. We're
               passionate about creating beautiful websites that are fast, secure, and easy to use.
             </motion.p>
-            <motion.div variants={bounceAnimation}>
+            <motion.div
+              className="flex flex-row w-full justify-center lg:justify-start"
+              variants={bounceAnimation}
+            >
               <Button size="xl" className="text-2xl uppercase">
                 <a href="/contact">Get A Quote</a>
                 <svg

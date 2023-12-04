@@ -18,15 +18,15 @@ export default function Hero() {
 
   return (
     <section>
-      <div className="relative mx-8 lg:mx-auto max-w-screen overflow-x-clip">
+      <div className="relative mx-8 lg:mx-auto max-w-screen lg:max-w-screen-xl overflow-x-clip">
         <motion.div
           ref={ref}
           animate={isInView ? 'animate' : 'initial'}
           variants={staggeredAnimation}
-          className="z-10 my-16 flex flex-col items-center text-center sm:my-24 md:my-32 lg:my-48 lg:grid lg:grid-cols-3"
+          className="z-10 my-16 flex flex-col items-center text-center sm:my-24 lg:my-48 lg:grid lg:grid-cols-3"
         >
           <div className="col-span-2">
-            <h1 className="font-melodrama text-6xl leading-tight sm:text-7xl lg:text-9xl text-center md:text-start">
+            <h1 className="font-melodrama text-6xl leading-tight sm:text-7xl lg:text-9xl text-center lg:text-start">
               <motion.span
                 variants={bounceAnimation}
                 className="bg-gradient-to-r from-neutral-50 from-65% to-neutral-400 bg-clip-text text-transparent lg:to-neutral-600"
@@ -50,7 +50,7 @@ export default function Hero() {
           <div className="col-span-1 text-start flex flex-col items-start justify-between gap-y-8 py-12 lg:h-full">
             <motion.p
               variants={bounceAnimation}
-              className="text-base text-center md:text-start leading-tight text-neutral-400"
+              className="text-base text-center lg:text-start leading-tight text-neutral-400"
             >
               Sweeny Studio is a modern web design & development studio based in Australia. We're
               passionate about creating beautiful websites that are fast, secure, and easy to use.
@@ -81,7 +81,7 @@ export default function Hero() {
           src={HeroCircle.src}
           alt="circle background"
           loading="eager"
-          className="animateEntry h-[20rem] w-auto animate-spinSlow md:h-[32rem]"
+          className="animateEntry h-[20rem] w-auto animate-spinSlow lg:h-[32rem]"
           width={1024}
           height={1024}
         />

@@ -1,19 +1,17 @@
 ---
 import Blockrecipes from '@assets/casestudies/blockrecipes-desktop.png';
 import ElectricConfetti from '@assets/casestudies/electric-confetti-tablet.png';
-import GoodMix from '@assets/casestudies/goodmix-desktop.jpeg';
 import Kahuna from '@assets/casestudies/kahuna-desktop.jpeg';
 import MacSweeny from '@assets/casestudies/mac-sweeny-tablet.png';
 import PaydeskMobile from '@assets/casestudies/paydesk-mobile.png';
-import Sectionhead from '@components/ui/astro/sectionhead.astro';
 import SectionHead from '@components/ui/react/section-head';
 import CaseStudy from '../ui/react/case-study';
 ---
 
 <section class="my-32 min-h-screen">
   <SectionHead title="Case Studies." className="text-center" />
-  <div class="my-32 grid h-full grid-cols-12 items-baseline">
-    <div class="col-span-5">
+  <div class="my-32 h-full items-baseline lg:grid lg:grid-cols-12">
+    <div class="lg:col-span-5">
       <CaseStudy
         client:load
         imageSrc={MacSweeny}
@@ -36,7 +34,7 @@ import CaseStudy from '../ui/react/case-study';
       />
     </div>
   </div>
-  <div class="my-32 grid h-full grid-cols-12 items-baseline">
+  <div class="my-32 h-full items-baseline lg:grid lg:grid-cols-12">
     <div class="col-span-8 col-start-3">
       <CaseStudy
         client:load
@@ -49,7 +47,7 @@ import CaseStudy from '../ui/react/case-study';
       />
     </div>
   </div>
-  <div class="my-32 grid h-full grid-cols-12 items-baseline">
+  <div class="my-32 h-full items-baseline lg:grid lg:grid-cols-12">
     <div class="col-span-6 col-start-2">
       <CaseStudy
         client:load

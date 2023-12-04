@@ -32,6 +32,9 @@ export default function CaseStudy({
       >
         <motion.div
           variants={bounceAnimation}
+          whileHover={{
+            scale: 0.9,
+          }}
           className="group -z-10 rounded-xl border border-neutral-700 font-melodrama shadow-2xl shadow-neutral-700 transition duration-300 hover:scale-90 hover:shadow-neutral-500"
         >
           <a href={url} target="_blank">

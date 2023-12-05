@@ -1,0 +1,25 @@
+---
+import Contactform from '@components/ui/astro/contactform.astro';
+import Sectionhead from '@components/ui/astro/sectionhead.astro';
+import { Icon } from 'astro-icon';
+---
+
+<Sectionhead title="Get In Touch." style="text-center" />
+<div class="mx-auto mt-16 grid max-w-screen-xl gap-10 md:grid-cols-2">
+  <div>
+    <h2 class="font-melodrama text-3xl font-medium text-neutral-50">Contact Sweeny Studio</h2>
+    <p class="mt-3 text-lg leading-relaxed text-neutral-300">
+      Have a question or inquiry? Fill out the form below and we will get back to you as soon as
+      possible.
+    </p>
+    <div class="mt-5">
+      <div class="mt-2 flex items-center space-x-2 text-neutral-100">
+        <Icon class="h-4 w-4 text-neutral-300" name="uil:envelope" />
+        <a href="mailto:hello@astroship-pro.com">macsweeny.webdev@gmail.com</a>
+      </div>
+    </div>
+  </div>
+  <div class="mb-5 rounded-xl bg-neutral-300 p-5 shadow-lg shadow-neutral-700 md:p-8">
+    <Contactform />
+  </div>
+</div>

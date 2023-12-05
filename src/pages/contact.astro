@@ -1,6 +1,6 @@
 ---
-import Contactform from '@components/sections/contactform.astro';
 import Button from '@components/ui/astro/button.astro';
+import Contactform from '@components/ui/astro/contactform.astro';
 import Container from '@components/ui/astro/container.astro';
 import Sectionhead from '@components/ui/astro/sectionhead.astro';
 import Layout from '@layouts/Layout.astro';
@@ -14,28 +14,21 @@ import { Icon } from 'astro-icon';
       <Fragment slot="desc">Got Questions? We are here to help.</Fragment>
     </Sectionhead>
 
-    <div class="mx-auto mt-16 grid max-w-4xl gap-10 md:grid-cols-2">
+    <div class="mx-auto mt-16 grid max-w-screen-xl gap-10 md:grid-cols-2">
       <div>
-        <h2 class="text-2xl font-medium text-gray-800">Contact Astroship</h2>
-        <p class="mt-3 text-lg leading-relaxed text-slate-500">
-          Have something to say? We are here to help. Fill up the form or send email or call phone.
+        <h2 class="font-melodrama text-3xl font-medium text-neutral-50">Contact Sweeny Studio</h2>
+        <p class="mt-3 text-lg leading-relaxed text-neutral-300">
+          Have a question or inquiry? Fill out the form below and we will get back to you as soon as
+          possible.
         </p>
         <div class="mt-5">
-          <div class="mt-2 flex items-center space-x-2 text-gray-600">
-            <Icon class="h-4 w-4 text-gray-400" name="uil:map-marker" />
-            <span>1734 Sanfransico, CA 93063</span>
-          </div><div class="mt-2 flex items-center space-x-2 text-gray-600">
-            <Icon class="h-4 w-4 text-gray-400" name="uil:envelope" /><a
-              href="mailto:hello@astroship-pro.com">hello@astroship-pro.com</a
-            >
-          </div><div class="mt-2 flex items-center space-x-2 text-gray-600">
-            <Icon class="h-4 w-4 text-gray-400" name="uil:phone" /><a href="tel:+1 (987) 4587 899"
-              >+1 (987) 4587 899</a
-            >
+          <div class="mt-2 flex items-center space-x-2 text-neutral-100">
+            <Icon class="h-4 w-4 text-neutral-300" name="uil:envelope" />
+            <a href="mailto:hello@astroship-pro.com">macsweeny.webdev@gmail.com</a>
           </div>
         </div>
       </div>
-      <div class="mb-5 rounded-xl bg-slate-100 p-5 md:p-8">
+      <div class="mb-5 rounded-xl bg-neutral-300 p-5 shadow-lg shadow-neutral-700 md:p-8">
         <Contactform />
       </div>
     </div>

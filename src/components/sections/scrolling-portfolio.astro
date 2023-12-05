@@ -1,18 +1,23 @@
 ---
-import Screenshot1 from '@assets/example-1.png';
-import Screenshot2 from '@assets/example-2.png';
-import Screenshot3 from '@assets/example-3.png';
+import Cafe from '@assets/portfolio/cafe.png';
+import Construction from '@assets/portfolio/construction.png';
+import Fashion from '@assets/portfolio/fashion.png';
+import Palais from '@assets/portfolio/palais.png';
+import Solar from '@assets/portfolio/solar.png';
+import Tosladas from '@assets/portfolio/tosladas.png';
+import Wellbeing from '@assets/portfolio/wellbeing-x.png';
 import ScrollingContent from '@components/ui/react/scrolling-content';
 import { Picture } from 'astro:assets';
 ---
 
 <div class="my-16">
   <ScrollingContent client:load baseVelocity={100}>
-    <Picture src={Screenshot1} format="png" alt="Screenshot1" />
-    <Picture src={Screenshot2} format="png" alt="Screenshot2" />
-    <Picture src={Screenshot3} format="png" alt="Screenshot3" />
-    <Picture src={Screenshot1} format="png" alt="Screenshot3" />
-    <Picture src={Screenshot2} format="png" alt="Screenshot3" />
-    <Picture src={Screenshot3} format="png" alt="Screenshot3" />
+    <Picture src={Tosladas} format="png" alt="Screenshot1" class="h-72 w-auto rounded-sm" />
+    <Picture src={Wellbeing} format="png" alt="Screenshot1" class="h-72 w-auto rounded-sm" />
+    <Picture src={Fashion} format="png" alt="Screenshot1" class="h-72 w-auto rounded-sm" />
+    <Picture src={Solar} format="png" alt="Screenshot1" class="h-72 w-auto rounded-sm" />
+    <Picture src={Palais} format="png" alt="Screenshot1" class="h-72 w-auto rounded-sm" />
+    <Picture src={Cafe} format="png" alt="Screenshot1" class="h-72 w-auto rounded-sm" />
+    <Picture src={Construction} format="png" alt="Screenshot1" class="h-72 w-auto rounded-sm" />
   </ScrollingContent>
 </div>

@@ -30,12 +30,15 @@ export default function ScrollingContent({ children, baseVelocity = 300 }: Scrol
   });
 
   // Measure the width of a single set of content
+
   useEffect(() => {
     if (containerRef.current && containerRef.current.firstChild) {
-      contentWidthRef.current = (containerRef.current.firstChild as HTMLDivElement).offsetWidth / 2;
+      const childWidth = (containerRef.current.firstChild as HTMLDivElement).offsetWidth;
+      contentWidthRef.current = childWidth / 2;
+      // Set initial position to the start of the 4th set of children
+      baseX.set(-3 * childWidth);
     }
   }, [children]);
-
   useAnimationFrame((t, delta) => {
     // Determine the direction based on user scroll, default is forward (1)
     const directionFactor = velocityFactor.get() < 0 ? -1 : 1;

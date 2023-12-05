@@ -18,7 +18,7 @@ export default function Hero() {
 
   return (
     <section>
-      <div className="relative mx-8 lg:mx-auto max-w-screen lg:max-w-screen-xl overflow-x-clip">
+      <div className="relative mx-8 lg:mx-auto max-w-screen lg:max-w-screen-xl overflow-x-clip ">
         <motion.div
           ref={ref}
           animate={isInView ? 'animate' : 'initial'}

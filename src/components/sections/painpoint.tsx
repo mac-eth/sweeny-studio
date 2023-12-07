@@ -1,6 +1,6 @@
-import WhyScreenshot from '@assets/design.png';
+import WhyScreenshot from '@assets/mobileimg.png';
 import Button from '@components/ui/react/button';
-import { bounceAnimation, staggeredAnimation } from '@utils/animations';
+import { bounceAnimation, staggeredAnimationFast } from '@utils/animations';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 
@@ -20,18 +20,18 @@ export default function Why() {
       className="overflow-hidden py-12 lg:py-24"
       ref={ref}
       animate={isInView ? 'animate' : 'initial'}
-      variants={staggeredAnimation}
+      variants={staggeredAnimationFast}
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-          <div className="lg:ml-auto lg:pl-4 lg:pt-4">
+          <div className="lg:pr-8 lg:pt-4">
             <div className="lg:max-w-lg">
               <motion.h2
                 variants={bounceAnimation}
                 className="mt-2 font-melodrama text-3xl tracking-tight text-white sm:text-6xl"
               >
                 <span className="bg-gradient-to-b from-neutral-50 from-60% to-neutral-400 bg-clip-text text-transparent lg:to-neutral-600">
-                  Fast, Affordable, and Beautiful Websites
+                  No More Slow and Painful Web Agencies
                 </span>
               </motion.h2>
               <motion.p variants={bounceAnimation} className="mt-6 text-lg leading-8 text-gray-300">
@@ -57,16 +57,12 @@ export default function Why() {
               </Button>
             </div>
           </div>
-          <div className="flex items-start justify-end lg:order-first">
-            <motion.img
-              src={WhyScreenshot.src}
-              alt="Product screenshot"
-              className="w-[24rem] max-w-none rounded-xl shadow-xl sm:w-[50rem] md:-ml-4 lg:-ml-0"
-              width={2432}
-              height={1442}
-              variants={bounceAnimation}
-            />
-          </div>
+          <motion.img
+            src={WhyScreenshot.src}
+            alt="Product screenshot"
+            className="w-[24rem] max-w-none rounded-xl shadow-xl sm:w-[36rem] md:-ml-4 lg:-ml-0"
+            variants={bounceAnimation}
+          />
         </div>
       </div>
     </motion.div>

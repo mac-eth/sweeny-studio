@@ -1,23 +1,72 @@
 ---
-import Cafe from '@assets/portfolio/cafe.png';
-import Construction from '@assets/portfolio/construction.png';
+import Agenci from '@assets/portfolio/agenci.png';
+import Studio from '@assets/portfolio/darkstudio.png';
 import Fashion from '@assets/portfolio/fashion.png';
-import Palais from '@assets/portfolio/palais.png';
-import Solar from '@assets/portfolio/solar.png';
-import Tosladas from '@assets/portfolio/tosladas.png';
-import Wellbeing from '@assets/portfolio/wellbeing-x.png';
+import Homezy from '@assets/portfolio/homezy.png';
+import Inspire from '@assets/portfolio/Inspire.png';
+import Joyfolio from '@assets/portfolio/Joyfolio.png';
+import Request from '@assets/portfolio/requesto.png';
+import Thai from '@assets/portfolio/thai.png';
+import WellBeing from '@assets/portfolio/wellbeing.png';
 import ScrollingContent from '@components/ui/react/scrolling-content';
 import { Picture } from 'astro:assets';
+
+const Pictures = [
+  {
+    image: Homezy,
+    alt: 'Homezy',
+  },
+  {
+    image: Thai,
+    alt: 'Thai',
+  },
+  {
+    image: WellBeing,
+    alt: 'WellBeing',
+  },
+  {
+    image: Agenci,
+    alt: 'Agenci',
+  },
+  {
+    image: Joyfolio,
+    alt: 'Joyfolio',
+  },
+  {
+    image: Inspire,
+    alt: 'Inspire',
+  },
+  {
+    image: WellBeing,
+    alt: 'WellBeing',
+  },
+  {
+    image: Fashion,
+    alt: 'Fashion',
+  },
+  {
+    image: Request,
+    alt: 'Request',
+  },
+  {
+    image: Studio,
+    alt: 'Studio',
+  },
+];
 ---
 
-<div class="my-16">
+<div class="my-4 md:my-16">
   <ScrollingContent client:load baseVelocity={100}>
-    <Picture src={Tosladas} format="png" alt="Screenshot1" class="h-72 w-auto rounded-sm" />
-    <Picture src={Wellbeing} format="png" alt="Screenshot1" class="h-72 w-auto rounded-sm" />
-    <Picture src={Fashion} format="png" alt="Screenshot1" class="h-72 w-auto rounded-sm" />
-    <Picture src={Solar} format="png" alt="Screenshot1" class="h-72 w-auto rounded-sm" />
-    <Picture src={Palais} format="png" alt="Screenshot1" class="h-72 w-auto rounded-sm" />
-    <Picture src={Cafe} format="png" alt="Screenshot1" class="h-72 w-auto rounded-sm" />
-    <Picture src={Construction} format="png" alt="Screenshot1" class="h-72 w-auto rounded-sm" />
+    {
+      Pictures.map(({ image, alt }) => (
+        <Picture
+          loading="eager"
+          src={image}
+          format="png"
+          alt={alt}
+          class="h-32 w-auto rounded-lg sm:h-48 lg:h-72"
+        />
+      ))
+    }
   </ScrollingContent>
 </div>

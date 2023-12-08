@@ -1,7 +1,8 @@
 ---
 import Sectionhead from '@components/ui/astro/sectionhead.astro';
 import Content from '@components/ui/react/content';
-import ProcessCards from '@components/ui/react/process-cards';
+import ProcessCardsHorizontal from '@components/ui/react/process-cards-horizontal';
+import ProcessCards from '@components/ui/react/process-cards-vertical';
 ---
 
 <Sectionhead title="Our Process" style="text-center" />
@@ -13,4 +14,5 @@ import ProcessCards from '@components/ui/react/process-cards';
     and we'll be happy to work with you to create a custom package that fits your needs.
   </p>
 </Content>
-<ProcessCards client:load />
+<ProcessCardsHorizontal client:load />
+<!-- <ProcessCards client:load /> -->

@@ -55,7 +55,7 @@ const Pictures = [
 ];
 ---
 
-<div class="my-4 md:my-16">
+<div class="relative my-4 md:my-16">
   <ScrollingContent client:load baseVelocity={100}>
     {
       Pictures.map(({ image, alt }) => (
@@ -64,7 +64,7 @@ const Pictures = [
           src={image}
           format="png"
           alt={alt}
-          class="h-32 w-auto rounded-lg sm:h-48 lg:h-72"
+          class="h-32 w-auto rounded-lg border border-neutral-700 sm:h-48 lg:h-72"
         />
       ))
     }

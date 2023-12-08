@@ -1,4 +1,5 @@
 import { ChevronDownIcon } from '@radix-ui/react-icons';
+import type { ImageMetadata } from 'astro';
 import { AnimatePresence, motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import DesignImg from '../../../assets/design.jpeg';
@@ -30,7 +31,7 @@ interface CardProps {
   card: {
     name: string;
     description: string;
-    image: string;
+    image: ImageMetadata;
   };
 }
 
@@ -66,7 +67,7 @@ function ProcessCard({ card }: CardProps) {
           animate={{ y: isHovered ? 0 : '100%' }}
           transition={{ type: 'spring', stiffness: 400, damping: 50 }}
         />
-        <h2 className="text-4xl font-medium text-neutral-400 group-hover:text-neutral-100 transition-colors z-10">
+        <h2 className="lg:text-4xl text-2xl font-medium text-neutral-400 group-hover:text-neutral-100 transition-colors z-10">
           {card.name}
         </h2>
         <motion.div

@@ -14,15 +14,14 @@ import Layout from '@layouts/Layout.astro';
 
 <Layout footerMargin={false}>
   <Hero client:load />
-  <Logos />
+
+  <Container>
+    <Logos />
+  </Container>
   <ScrollingContent />
   <Who client:load />
   <Why client:load />
   <Container>
     <Process />
-    <CaseStudies />
   </Container>
-  <Testimonials />
-  <Contact />
-  <Container />
 </Layout>

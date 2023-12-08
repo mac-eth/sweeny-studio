@@ -61,7 +61,7 @@ export default function ScrollingContent({ children, baseVelocity = 300 }: Scrol
     <div ref={containerRef} className="group relative gap-10 overflow-hidden py-5 flex">
       <motion.div
         style={{ x: baseX }}
-        className="flex w-auto min-w-[200%] shrink-0 snap-x snap-mandatory flex-nowrap items-stretch gap-10 overflow-x-auto px-5 py-5"
+        className="flex w-auto min-w-[200%] shrink-0 snap-x snap-mandatory flex-nowrap items-stretch gap-10 overflow-x-auto px-5 py-5 "
       >
         {children}
         {children}

@@ -18,10 +18,11 @@ import Layout from '@layouts/Layout.astro';
   <Container>
     <Logos />
   </Container>
-  <ScrollingContent />
+  <ScrollingContent baseVelocity={100} />
   <Who client:load />
   <Why client:load />
   <Container>
     <Process />
   </Container>
+  <ScrollingContent baseVelocity={100} />
 </Layout>

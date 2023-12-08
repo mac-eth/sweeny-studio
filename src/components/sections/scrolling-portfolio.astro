@@ -53,10 +53,12 @@ const Pictures = [
     alt: 'Studio',
   },
 ];
+
+const { baseVelocity } = Astro.props;
 ---
 
 <div class="relative my-4 md:my-16">
-  <ScrollingContent client:load baseVelocity={100}>
+  <ScrollingContent client:load {baseVelocity}>
     {
       Pictures.map(({ image, alt }) => (
         <Picture
@@ -64,7 +66,7 @@ const Pictures = [
           src={image}
           format="png"
           alt={alt}
-          class="h-32 w-auto rounded-lg border border-neutral-700 sm:h-48 lg:h-72"
+          class="sm:h-54 h-48 w-auto rounded-lg border border-neutral-700 lg:h-72"
         />
       ))
     }

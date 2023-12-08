@@ -45,5 +45,11 @@ module.exports = {
         parser: 'astro',
       },
     },
+    {
+      files: '*.tsx',
+      options: {
+        parser: 'typescript',
+      },
+    },
   ],
 };

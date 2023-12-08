@@ -1,6 +1,6 @@
 import WhyScreenshot from '@assets/design.png';
 import Button from '@components/ui/react/button';
-import { bounceAnimation, staggeredAnimation } from '@utils/animations';
+import { bounceAnimation, staggeredAnimation, staggeredAnimationFast } from '@utils/animations';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 
@@ -20,7 +20,7 @@ export default function Why() {
       className="overflow-hidden py-12 lg:py-24"
       ref={ref}
       animate={isInView ? 'animate' : 'initial'}
-      variants={staggeredAnimation}
+      variants={staggeredAnimationFast}
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">

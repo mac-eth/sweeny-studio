@@ -1,0 +1,60 @@
+---
+import Button from '@components/ui/react/button';
+
+interface Props {
+  img: ImageMetadata;
+  title: string;
+  description: string;
+  href: string;
+  tags: string[];
+}
+
+const { img, title, description, href, tags } = Astro.props;
+---
+
+<div class="h-content sticky top-0 w-full border-y border-neutral-700 bg-neutral-950 py-8">
+  <div class="flex flex-col justify-between gap-x-16 md:grid md:grid-cols-2">
+    <img
+      class="col-start-1 my-8 h-auto w-full rounded-xl border border-neutral-700 object-cover"
+      src={img.src}
+      alt={title}
+    />
+    <div class="col-start-2 flex flex-col justify-between space-y-4">
+      <div class="flex flex-col gap-y-4">
+        <h3 class="font-melodrama text-4xl text-neutral-50">{title}</h3>
+        <p class="text-lg text-neutral-300">{description}</p>
+      </div>
+      <div class="flex flex-col items-start gap-y-4">
+        <Button
+          size="lg"
+          className="bg-neutral w-content w-auto cursor-default uppercase"
+          client:load
+        >
+          <span>Coming Soon</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 256 256"
+            class="ml-2 inline-block transition-all duration-300 group-hover:translate-x-2"
+          >
+            <path
+              d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"
+            ></path>
+          </svg>
+        </Button>
+
+        <div class="flex w-full flex-row gap-x-4">
+          {
+            tags.map((tag: string) => (
+              <div class="rounded-lg border border-neutral-700 bg-neutral-900 px-3 py-1.5">
+                <p class="text-sm text-neutral-300">{tag}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

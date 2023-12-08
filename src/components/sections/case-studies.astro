@@ -1,16 +1,58 @@
 ---
 import Blockrecipes from '@assets/casestudies/blockrecipes-desktop.png';
-import ElectricConfetti from '@assets/casestudies/electric-confetti-tablet.png';
-import Kahuna from '@assets/casestudies/kahuna-desktop.jpeg';
-import MacSweeny from '@assets/casestudies/mac-sweeny-tablet.png';
-import PaydeskMobile from '@assets/casestudies/paydesk-mobile.png';
+import CaseStudy from '@components/ui/astro/case-study.astro';
 import SectionHead from '@components/ui/react/section-head';
-import CaseStudy from '../ui/react/case-study';
+
+interface CaseStudy {
+  img: ImageMetadata;
+  title: string;
+  description: string;
+  href: string;
+  tags: string[];
+}
+
+const Casestudies = [
+  {
+    img: Blockrecipes,
+    title: 'Blockrecipes',
+    description: 'Blockrecipes is a real-time data analytics platform for the blockchain.',
+    href: 'https://www.blockrecipes.io/',
+    tags: ['Web Design', 'Web Development', 'Hosting'],
+  },
+  {
+    img: Blockrecipes,
+    title: 'Blockrecipes',
+    description: 'Blockrecipes is a real-time data analytics platform for the blockchain.',
+    href: 'https://www.blockrecipes.io/',
+    tags: ['Web Design', 'Web Development', 'Hosting'],
+  },
+  {
+    img: Blockrecipes,
+    title: 'Blockrecipes',
+    description: 'Blockrecipes is a real-time data analytics platform for the blockchain.',
+    href: 'https://www.blockrecipes.io/',
+    tags: ['Web Design', 'Web Development', 'Hosting'],
+  },
+];
 ---
 
 <section class="my-32 min-h-screen">
   <SectionHead title="Case Studies." className="text-center" />
-  <div class="my-32 h-full items-baseline lg:grid lg:grid-cols-12">
+  <div class="relative flex flex-col gap-y-8">
+    {
+      Casestudies.map((item) => (
+        <CaseStudy
+          img={item.img}
+          title={item.title}
+          description={item.description}
+          href={item.href}
+          tags={item.tags}
+        />
+      ))
+    }
+  </div>
+</section>
+<!-- <div class="my-32 h-full items-baseline lg:grid lg:grid-cols-12">
     <div class="lg:col-span-5">
       <CaseStudy
         client:load
@@ -70,5 +112,4 @@ import CaseStudy from '../ui/react/case-study';
         url="https://www.paydesk.co/"
       />
     </div>
-  </div>
-</section>
+  </div> -->

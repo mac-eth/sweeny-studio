@@ -22,7 +22,7 @@ const { img, title, description, href, tags } = Astro.props;
     <div class="col-start-2 flex flex-col justify-between space-y-4">
       <div class="flex flex-col gap-y-4">
         <h3 class="font-melodrama text-4xl text-neutral-50">{title}</h3>
-        <p class="text-lg text-neutral-300">{description}</p>
+        <p class="text-md text-neutral-300 md:text-lg">{description}</p>
       </div>
       <div class="flex flex-col items-start gap-y-4">
         <Button
@@ -49,7 +49,7 @@ const { img, title, description, href, tags } = Astro.props;
           {
             tags.map((tag: string) => (
               <div class="rounded-lg border border-neutral-700 bg-neutral-900 px-3 py-1.5">
-                <p class="text-sm text-neutral-300">{tag}</p>
+                <p class="text-xs text-neutral-300 sm:text-sm">{tag}</p>
               </div>
             ))
           }

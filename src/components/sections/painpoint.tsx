@@ -60,7 +60,7 @@ export default function Why() {
           <motion.img
             src={WhyScreenshot.src}
             alt="Product screenshot"
-            className="w-[24rem] max-w-none rounded-xl shadow-xl sm:w-[36rem] md:-ml-4 lg:-ml-0"
+            className="w-[24rem] h-auto max-w-none rounded-xl shadow-xl sm:w-[36rem] md:-ml-4 lg:-ml-0"
             variants={bounceAnimation}
           />
         </div>

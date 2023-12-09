@@ -62,8 +62,6 @@ export default function Why() {
               src={WhyScreenshot.src}
               alt="Product screenshot"
               className="w-[28rem] h-auto max-w-none rounded-xl shadow-xl sm:w-[50rem] md:-ml-4 lg:-ml-0"
-              width={2432}
-              height={1442}
               variants={bounceAnimation}
             />
           </div>

@@ -5,14 +5,15 @@ import ProcessCardsHorizontal from '@components/ui/react/process-cards-horizonta
 import ProcessCards from '@components/ui/react/process-cards-vertical';
 ---
 
-<Sectionhead title="Our Process" style="text-center" />
-<Content client:load>
-  <p class="font-satoshi text-xl text-neutral-300">
-    Here at Sweeny Studio we understand the painful processes that other web agencies offer. We like
-    to keep everything as simple as possible for you here. We have a few different packages to
-    choose from, but if you don't see what you're looking for, please don't hesitate to contact us
-    and we'll be happy to work with you to create a custom package that fits your needs.
-  </p>
-</Content>
-<ProcessCardsHorizontal client:load />
-<!-- <ProcessCards client:load /> -->
+<div id="process">
+  <Sectionhead title="Our Process" style="text-center" />
+  <Content client:load>
+    <p class="font-satoshi text-xl text-neutral-300">
+      Here at Sweeny Studio we understand the painful processes that other web agencies offer. We
+      like to keep everything as simple as possible for you here. We have a few different packages
+      to choose from, but if you don't see what you're looking for, please don't hesitate to contact
+      us and we'll be happy to work with you to create a custom package that fits your needs.
+    </p>
+  </Content>
+  <ProcessCardsHorizontal client:load />
+</div>

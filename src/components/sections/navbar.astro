@@ -1,0 +1,91 @@
+---
+import Container from '@components/ui/astro/container.astro';
+import Link from '@components/ui/astro/link.astro';
+import { Astronav, MenuIcon, MenuItems, StickyHeader } from 'astro-navbar';
+
+const menuitems = [
+  {
+    title: 'Case Studies',
+    path: '#case-studies',
+  },
+  {
+    title: 'Our Process',
+    path: '#process',
+  },
+  {
+    title: 'Pricing',
+    path: '/pricing',
+  },
+  {
+    title: 'Contact',
+    path: '/contact',
+  },
+];
+---
+
+<StickyHeader
+  class="sticky top-0 z-20 border-b transition-all"
+  scrollY={50}
+  defaultClass="py-5 border-transparent"
+  activeClass="py-2 bg-neutral-950/80 border-neutral-800 backdrop-blur-lg"
+  transition:persist
+>
+  <Container>
+    <div class="relative z-10 flex flex-col items-center justify-between lg:flex-row">
+      <Astronav>
+        <div class="flex w-full items-center justify-between lg:w-auto">
+          <a
+            href="/"
+            class="-ml-2 flex items-center rounded-full px-2 font-melodrama text-2xl transition"
+            ><span class="font-melodrama font-[700] text-neutral-50">Sweeny</span><span
+              class="text-neutral-300">Studio</span
+            >
+          </a>
+          <div class="block lg:hidden">
+            <MenuIcon class="h-7 w-7 text-neutral-600" />
+          </div>
+        </div>
+        <MenuItems class="mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto">
+          <ul class="flex flex-col lg:flex-row lg:gap-3">
+            {
+              menuitems.map((item) => (
+                <>
+                  <li>
+                    <a
+                      href={item.path}
+                      class="flex rounded-full py-2 text-lg text-neutral-300 underline-offset-4 transition duration-200 hover:text-neutral-50 hover:underline lg:px-3"
+                    >
+                      {item.title}
+                    </a>
+                  </li>
+                </>
+              ))
+            }
+          </ul>
+          <div class="mt-3 flex items-center gap-4 lg:hidden">
+            <Link href="#" style="muted" block size="md">Log in</Link>
+            <Link href="#" size="md" block>Try for Free</Link>
+          </div>
+        </MenuItems>
+      </Astronav>
+      <div>
+        <div class="hidden items-center gap-4 lg:flex">
+          <Link href="#" size="sm" class="group inline-flex items-center gap-px">
+            <span>Get a Quote</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="mt-px h-4 w-4 transition-transform group-hover:translate-x-1"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </Link>
+        </div>
+      </div>
+    </div>
+  </Container>
+</StickyHeader>

@@ -1,6 +1,6 @@
 ---
-import Navbar from '@components/navbar/navbar.astro';
 import Footer from '@components/sections/footer.astro';
+import Navbar from '@components/sections/navbar.astro';
 import { SEO } from 'astro-seo';
 import { ViewTransitions } from 'astro:transitions';
 import '@fontsource-variable/inter/index.css';
@@ -174,7 +174,7 @@ const makeTitle = title
     </style>
     <ViewTransitions />
   </head>
-  <body class="overflow-x-clip bg-neutral-950 font-satoshi text-neutral-300">
+  <body class="overflow-x-clip scroll-smooth bg-neutral-950 font-satoshi text-neutral-300">
     <Navbar />
     <slot />
     <Footer />

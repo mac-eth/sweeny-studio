@@ -1,4 +1,4 @@
-import WhyScreenshot from '@assets/design.png';
+import WhyScreenshot from '@assets/design.webp';
 import Button from '@components/ui/react/button';
 import { bounceAnimation, staggeredAnimation, staggeredAnimationFast } from '@utils/animations';
 import { motion, useAnimation, useInView } from 'framer-motion';
@@ -61,9 +61,7 @@ export default function Why() {
             <motion.img
               src={WhyScreenshot.src}
               alt="Product screenshot"
-              className="w-[28rem] max-w-none rounded-xl shadow-xl sm:w-[50rem] md:-ml-4 lg:-ml-0"
-              width={2432}
-              height={1442}
+              className="w-[28rem] h-auto max-w-none rounded-xl shadow-xl sm:w-[50rem] md:-ml-4 lg:-ml-0"
               variants={bounceAnimation}
             />
           </div>

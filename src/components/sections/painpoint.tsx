@@ -1,4 +1,4 @@
-import WhyScreenshot from '@assets/mobileimg.png';
+import WhyScreenshot from '@assets/mobileimg.webp';
 import Button from '@components/ui/react/button';
 import { bounceAnimation, staggeredAnimationFast } from '@utils/animations';
 import { motion, useAnimation, useInView } from 'framer-motion';

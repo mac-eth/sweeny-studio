@@ -121,7 +121,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function Testimonials() {
+function TestimonialGrid() {
   const ref = useRef(null);
   const isInView = useInView(ref);
   return (
@@ -129,7 +129,7 @@ export default function Testimonials() {
       initial="initial"
       animate={isInView ? 'animate' : 'initial'}
       variants={staggeredAnimationFast}
-      className="relative isolate"
+      className="relative isolate hidden md:block"
       ref={ref}
     >
       <div
@@ -156,7 +156,7 @@ export default function Testimonials() {
           }}
         />
       </div>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="">
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-neutral-100 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
           <motion.figure
             variants={bounceAnimation}
@@ -195,7 +195,7 @@ export default function Testimonials() {
                     <motion.figure
                       variants={bounceAnimation}
                       key={testimonial.author.handle}
-                      className="rounded-2xl bg-neutral-950 p-6 shadow-lg border border-neutral-700"
+                      className="rounded-2xl bg-gradient-to-br from-neutral-900 to-neutral-950 to-50% p-6 shadow-lg border border-neutral-700"
                     >
                       <blockquote className="text-neutral-300">
                         <p>{`“${testimonial.body}”`}</p>
@@ -215,5 +215,48 @@ export default function Testimonials() {
         </div>
       </div>
     </motion.div>
+  );
+}
+
+function TestimonialSlider() {
+  const testimonialsFlat = testimonials.reduce((acc, curr) => acc.concat(curr), []);
+  const flattenedTestimonials = testimonialsFlat.reduce((acc, curr) => acc.concat(curr), []);
+
+  return (
+    <div className="md:hidden relative my-12 py-12 border-y border-neutral-700 flex flex-row overflow-x-scroll bg-neutral-950 ">
+      <span className="absolute underline z-10 rotate-180 left-0 top-1/3 [writing-mode:vertical-rl] text-2xl text-neutral-300 font-melodrama ">
+        Scroll Right
+      </span>
+      {flattenedTestimonials.map((testimonial) => (
+        <div
+          key={testimonial.author.name}
+          className="ml-12 p-6 bg-gradient-to-br flex flex-col justify-between from-neutral-900 to-neutral-950 to-50% rounded-2xl shadow-lg border border-neutral-700 shadow-neutral-600 min-w-full"
+        >
+          <span className="text-neutral-300">
+            <p>{`“${testimonial.body}”`}</p>
+          </span>
+          <div className="mt-6 flex items-center gap-x-4 flex-row">
+            <div className="flex flex-col justify-between w-full">
+              <div className="font-semibold text-neutral-300">{testimonial.author.name}</div>
+              <div className="text-neutral-400">{`@${testimonial.author.handle}`}</div>
+            </div>
+            <img
+              className="h-10 w-auto rounded-full flex-none"
+              src={testimonial.author.imageUrl}
+              alt=""
+            />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default function Testimonials() {
+  return (
+    <>
+      <TestimonialSlider />
+      <TestimonialGrid />
+    </>
   );
 }

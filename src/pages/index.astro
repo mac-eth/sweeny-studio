@@ -1,6 +1,6 @@
 ---
 import CaseStudies from '@components/sections/case-studies.astro';
-import Contact from '@components/sections/contact.astro';
+import CTA from '@components/sections/cta.astro';
 import Hero from '@components/sections/hero';
 import Logos from '@components/sections/logos.astro';
 import Who from '@components/sections/painpoint';
@@ -21,6 +21,11 @@ import Layout from '@layouts/Layout.astro';
   <ScrollingContent baseVelocity={100} />
   <Who client:load />
   <Why client:load />
+  <CTA
+    title="Are You Ready To Stand Out From Your Competitors?"
+    description="No matter what your business is, we can help you create a website that will engage your customers, drive conversions and make you stand out from the crowd. "
+    buttonTitle="Let's Chat"
+  />
   <Container>
     <Process />
   </Container>
@@ -29,4 +34,9 @@ import Layout from '@layouts/Layout.astro';
     <CaseStudies />
     <Testimonials />
   </Container>
+  <CTA
+    title="Are You Ready To Give Your Business A Stunning Website?"
+    description="No matter what your business is, we can help you create a website that will engage your customers, drive conversions and make you stand out from the crowd. "
+    buttonTitle="Let's Chat"
+  />
 </Layout>

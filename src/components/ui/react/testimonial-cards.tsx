@@ -9,7 +9,6 @@ const featuredTestimonial = {
     handle: 'brennagoyette',
     imageUrl:
       'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=1024&h=1024&q=80',
-    logoUrl: 'https://tailwindui.com/img/logos/savvycal-logo-neutral-900.svg',
   },
 };
 const testimonials = [
@@ -200,11 +199,17 @@ function TestimonialGrid() {
                       <blockquote className="text-neutral-300">
                         <p>{`“${testimonial.body}”`}</p>
                       </blockquote>
-                      <figcaption className="mt-6 flex items-center gap-x-4">
-                        <div>
+                      <figcaption className="mt-6 flex items-center flex-row justify-between gap-x-4">
+                        <div className="flex flex-col">
                           <div className="font-semibold">{testimonial.author.name}</div>
                           <div className="text-neutral-400">{`@${testimonial.author.handle}`}</div>
                         </div>
+                        <img
+                          loading="lazy"
+                          className="h-10 w-auto rounded-full flex-none"
+                          src={testimonial.author.imageUrl}
+                          alt=""
+                        />
                       </figcaption>
                     </motion.figure>
                   ))}
@@ -241,6 +246,7 @@ function TestimonialSlider() {
               <div className="text-neutral-400">{`@${testimonial.author.handle}`}</div>
             </div>
             <img
+              loading="lazy"
               className="h-10 w-auto rounded-full flex-none"
               src={testimonial.author.imageUrl}
               alt=""

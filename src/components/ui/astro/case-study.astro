@@ -18,6 +18,7 @@ const { img, title, description, href, tags } = Astro.props;
       class="col-start-1 my-8 h-auto w-full rounded-xl border border-neutral-700 object-cover"
       src={img.src}
       alt={title}
+      loading="lazy"
     />
     <div class="col-start-2 flex flex-col justify-between space-y-4">
       <div class="flex flex-col gap-y-4">

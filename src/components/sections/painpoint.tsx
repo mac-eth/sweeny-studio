@@ -17,7 +17,7 @@ export default function Why() {
   }, [isInView, controls]);
   return (
     <motion.div
-      className="overflow-hidden py-12 lg:py-24"
+      className="relative overflow-hidden py-12 lg:py-24 "
       ref={ref}
       animate={isInView ? 'animate' : 'initial'}
       variants={staggeredAnimationFast}

@@ -1,5 +1,5 @@
 ---
-const { title, style } = Astro.props;
+const { title, style, description } = Astro.props;
 ---
 
 <h2 class={` ${style} font-melodrama text-6xl leading-tight sm:text-7xl lg:text-9xl lg:my-16`}>
@@ -9,3 +9,6 @@ const { title, style } = Astro.props;
     {title}
   </span>
 </h2>
+<p class="mx-auto mt-4 max-w-2xl text-center text-lg text-neutral-300 lg:max-w-3xl">
+  {description}
+</p>

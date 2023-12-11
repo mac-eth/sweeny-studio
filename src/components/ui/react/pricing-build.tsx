@@ -62,9 +62,15 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function Example() {
+export default function BuildPricing() {
   return (
-    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="my-16 mx-auto max-w-7xl px-6 lg:px-8">
+      <h3 className="text-start font-melodrama text-3xl text-neutral-50 sm:text-4xl lg:text-5xl">
+        Website Build Packages
+      </h3>
+      <p className="mt-4 text-start text-lg text-neutral-300">
+        We offer a variety of website build packages to fit your business needs and budget.
+      </p>
       <div className="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
         {tiers.map((tier) => (
           <div
@@ -95,7 +101,7 @@ export default function Example() {
               aria-describedby={tier.id}
               className={classNames(
                 tier.mostPopular
-                  ? 'bg-neutral-50 hover:bg-neutral-400 text-neutral-800 border border-neutral-700 shadow-sm '
+                  ? 'bg-neutral-50 hover:bg-neutral-400 text-neutral-800 border border-neutral-700/20 shadow-white/80 shadow-lg hover:shadow-neutral-400 transition-all duration-200 '
                   : 'bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white',
                 'mt-6 block rounded-full py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition-colors duration-300'
               )}
